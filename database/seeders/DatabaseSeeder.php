@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(3)->create();
 
-        // User::create([
-        //     'name' => 'Effan Najwaini',
-        //     'email' => 'effan@poliban.ac.id',
-        //     'password' => bcrypt('rahasia7')
-        // ]);
+        User::create([
+            'name' => 'Effan Najwaini',
+            'username' => 'effan',
+            'email' => 'effan@poliban.ac.id',
+            'password' => bcrypt('rahasia')
+        ]);
 
         // User::create([
         //     'name' => 'Farhana Afida',
@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('12345')
         // ]);
 
+        User::factory(3)->create();
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming'
